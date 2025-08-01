@@ -65,7 +65,7 @@ car-evaluation-predictor/
 ## ▶️ Lancer le projet en local
 
 ```bash
-git clone https://github.com/<ton-utilisateur>/car-evaluation-predictor.git
+git clone https://github.com/ghazifd/car-evaluation-predictor.git
 cd car-evaluation-predictor
 pip install -r requirements.txt
 python app.py
