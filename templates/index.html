@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Evaluation Predictor</title>
+</head>
+<body>
+    <h2>Test de prédiction de voiture</h2>
+    <form method="POST">
+        <label>Buying:</label>
+        <select name="buying">
+            <option>low</option><option>med</option><option>high</option><option>vhigh</option>
+        </select><br>
+
+        <label>Maint:</label>
+        <select name="maint">
+            <option>low</option><option>med</option><option>high</option><option>vhigh</option>
+        </select><br>
+
+        <label>Doors:</label>
+        <select name="doors">
+            <option>2</option><option>3</option><option>4</option><option>5more</option>
+        </select><br>
+
+        <label>Persons:</label>
+        <select name="persons">
+            <option>2</option><option>4</option><option>more</option>
+        </select><br>
+
+        <label>Lug_boot:</label>
+        <select name="lug_boot">
+            <option>small</option><option>med</option><option>big</option>
+        </select><br>
+
+        <label>Safety:</label>
+        <select name="safety">
+            <option>low</option><option>med</option><option>high</option>
+        </select><br>
+
+        <button type="submit">Prédire</button>
+    </form>
+
+    {% if prediction %}
+        <h3>Classe prédite : {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
