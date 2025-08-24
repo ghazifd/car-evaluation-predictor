@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultat</title>
+</head>
+<body>
+    <h2>Résultat de la prédiction</h2>
+    <p>🚗 Classe prédite : <b>{{ prediction }}</b></p>
+
+    <h3>Probabilités :</h3>
+    <ul>
+        {% for label, value in probs.items() %}
+            <li>{{ label }} : {{ "%.2f"|format(value*100) }} %</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Graphique :</h3>
+    <img src="{{ url_for('static', filename='probabilities.png') }}" alt="Graphique des probabilités">
+</body>
+</html>

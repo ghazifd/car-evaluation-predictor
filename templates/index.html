@@ -1,46 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
     <title>Car Evaluation Predictor</title>
 </head>
 <body>
-    <h2>Test de prédiction de voiture</h2>
-    <form method="POST">
-        <label>Buying:</label>
-        <select name="buying">
-            <option>low</option><option>med</option><option>high</option><option>vhigh</option>
-        </select><br>
+    <h2>Évaluation de voiture 🚗</h2>
+    <form action="/predict" method="post">
+        <label>Achat (buying):</label>
+        <select name="buying" required>
+            <option value="vhigh">vhigh</option>
+            <option value="high">high</option>
+            <option value="med">med</option>
+            <option value="low">low</option>
+        </select><br><br>
 
-        <label>Maint:</label>
-        <select name="maint">
-            <option>low</option><option>med</option><option>high</option><option>vhigh</option>
-        </select><br>
+        <label>Maintenance (maint):</label>
+        <select name="maint" required>
+            <option value="vhigh">vhigh</option>
+            <option value="high">high</option>
+            <option value="med">med</option>
+            <option value="low">low</option>
+        </select><br><br>
 
-        <label>Doors:</label>
-        <select name="doors">
-            <option>2</option><option>3</option><option>4</option><option>5more</option>
-        </select><br>
+        <label>Portes (doors):</label>
+        <select name="doors" required>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5more">5more</option>
+        </select><br><br>
 
-        <label>Persons:</label>
-        <select name="persons">
-            <option>2</option><option>4</option><option>more</option>
-        </select><br>
+        <label>Personnes (persons):</label>
+        <select name="persons" required>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="more">more</option>
+        </select><br><br>
 
-        <label>Lug_boot:</label>
-        <select name="lug_boot">
-            <option>small</option><option>med</option><option>big</option>
-        </select><br>
+        <label>Coffre (lug_boot):</label>
+        <select name="lug_boot" required>
+            <option value="small">small</option>
+            <option value="med">med</option>
+            <option value="big">big</option>
+        </select><br><br>
 
-        <label>Safety:</label>
-        <select name="safety">
-            <option>low</option><option>med</option><option>high</option>
-        </select><br>
+        <label>Sécurité (safety):</label>
+        <select name="safety" required>
+            <option value="low">low</option>
+            <option value="med">med</option>
+            <option value="high">high</option>
+        </select><br><br>
 
         <button type="submit">Prédire</button>
     </form>
-
-    {% if prediction %}
-        <h3>Classe prédite : {{ prediction }}</h3>
-    {% endif %}
 </body>
 </html>

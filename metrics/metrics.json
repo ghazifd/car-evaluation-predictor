@@ -1,0 +1,16 @@
+{
+  "scores": [
+    {
+      "model": "RandomForest",
+      "f1_macro": 0.9585042728414783,
+      "accuracy": 0.9797687861271677
+    },
+    {
+      "model": "SVM-RBF",
+      "f1_macro": 0.9081430145493702,
+      "accuracy": 0.9624277456647399
+    }
+  ],
+  "best_model": "RandomForest",
+  "best_f1": 0.9585042728414783
+}
