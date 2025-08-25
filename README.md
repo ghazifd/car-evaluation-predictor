@@ -47,17 +47,26 @@ Développée avec **Flask**, l’interface permet à l’utilisateur de :
 ## 🗂 Arborescence du projet
 
 ```
-car-evaluation-predictor/
+car-evaluation-predictor-pro/
+├── app.py
+├── train_model.py
+├── requirements.txt
+├── Dockerfile
+├── README.md
+├── TASKS.md
+├── data/
+│   └── car.data
 ├── model/
-│   └── model.pkl
-├── static/
-│   └── style.css
+│   └── model.joblib   (généré après entraînement)
+├── metrics/
+│   └── metrics.json   (généré après entraînement)
 ├── templates/
 │   └── index.html
-├── app.py
-├── Prediction.ipynb
-├── requirements.txt
-└── README.md
+├── static/
+│   └── style.css
+└── tests/
+    └── test_api.py
+
 ```
 
 ---
